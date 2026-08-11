@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Lugar</title>
+</head>
+
+<body>
+
+    <h1>Editar Lugar</h1>
+
+    <form method="POST">
+
+        <label>Nome do lugar:</label>
+
+        <input
+            type="text"
+            name="nome"
+            value="{{ lugar.nome }}"
+            required
+        >
+
+        <br><br>
+
+
+        <label>Data da visita:</label>
+
+        <input
+            type="date"
+            name="data_visita"
+            value="{{ lugar.data_visita }}"
+            required
+        >
+
+        <br><br>
+
+
+        <label>Descrição:</label>
+
+        <textarea
+            name="descricao"
+            required
+        >{{ lugar.descricao }}</textarea>
+
+        <br><br>
+
+
+        <button type="submit">
+            Salvar alterações
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="/">Voltar</a>
+
+</body>
+
+</html>
