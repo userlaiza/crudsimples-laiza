@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lugares Visitados</title>
+</head>
+
+<body>
+
+    <h1>Lugares Visitados</h1>
+
+    <a href="/cadastrar">Cadastrar lugar</a>
+
+    <br><br>
+
+    <table border="1">
+
+        <tr>
+            <th>ID</th>
+            <th>Nome do lugar</th>
+            <th>Data da visita</th>
+            <th>Descrição</th>
+            <th>Ações</th>
+        </tr>
+
+        {% for lugar in lugares %}
+
+        <tr>
+
+            <td>{{ lugar.id }}</td>
+
+            <td>{{ lugar.nome }}</td>
+
+            <td>{{ lugar.data_visita }}</td>
+
+            <td>{{ lugar.descricao }}</td>
+
+            <td>
+                <a href="/editar/{{ lugar.id }}">Editar</a>
+
+                <a href="/excluir/{{ lugar.id }}">Excluir</a>
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</body>
+
+</html>
